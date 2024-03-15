@@ -35,5 +35,9 @@ export default {
   position: fixed;
   right: 50px;
   bottom: 50px;
+  @media (max-width: 768px) {
+    right: 8px;
+    bottom: 16px;
+  }
 }
 </style>
