@@ -79,10 +79,14 @@ export default {
     width: 400px;
   }
 }
-p {
+.description_wrapper {
   width: 560px;
   font-weight: bold;
   margin-left: 20px;
+  @media (max-width: 600px) {
+    width: calc(100% - 32px);
+    margin-left: 0;
+  }
 }
 .mailIcon {
   position: relative;
@@ -93,6 +97,7 @@ p {
   display: flex;
   align-items: center;
   gap: 16px;
+  padding-left: 0;
   li {
     width: 40px;
     transition: 0.3s;
