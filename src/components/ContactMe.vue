@@ -1,8 +1,5 @@
 <template>
   <div>
-    <!-- <a href="mailto:linyashamei@gmail.com" class="c_btn-mail mailtoui"
-      ><span class="material-symbols-outlined"> mail </span></a
-    > -->
     <v-btn
       class="mx-2 mailFixed"
       @click="opentoMail"

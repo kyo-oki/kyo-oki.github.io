@@ -7,17 +7,12 @@
 </template>
 
 <script>
-// import FadeIn from "@/components/FadeIn";
-
 export default {
   props: {
     title: {
       require: true,
       type: String,
     },
-  },
-  components: {
-    // FadeIn,
   },
 };
 </script>
