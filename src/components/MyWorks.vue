@@ -1,6 +1,6 @@
 <template>
   <v-row id="works">
-    <HeadText title="MY WORKS" />
+    <HeadText title="WORKS" />
     <v-row justify="center">
       <div v-for="(work, index) in works" :key="index">
         <v-card class="mx-auto cardWrapper" max-width="344">
@@ -65,7 +65,7 @@ export default {
           title: "Raksul Product - Envelope",
           url: "https://raksul.com/print/envelope/naga3/traced_off/prices?size=NAGA3",
           skill:
-            "Vue.js, Jest, E2E, Ruby on Rails, Project Management, Requirement definition",
+            "Vue.js, Typescript, Jest, E2E, Ruby on Rails, Project Management, Requirement definition",
           img: "raksul.png",
           description:
             "Responsible for everything from requirements definition to wireframe creation and development. The number of products packaged in envelopes increased approximately 10 times, contributing to sales.",
@@ -93,7 +93,7 @@ export default {
         {
           title: "Mynaportal",
           url: "https://myna.go.jp/SCK1501_02_001/SCK1501_02_001_Init.form",
-          skill: "Javascript, PHP, Photoshop",
+          skill: "JavaScript, PHP, Photoshop",
           img: "myna.png",
           description:
             "Mynaportal is an online service operated by the government. Citizens can perform administrative procedures such as childcare and nursing care in one place, and also check notifications from government agencies.",
@@ -102,7 +102,7 @@ export default {
         {
           title: "Tokyo Midtown",
           url: "https://www.tokyo-midtown.com/",
-          skill: "Wordpress, Javascript, jQuery",
+          skill: "WordPress, JavaScript, jQuery",
           img: "tokyomidtown.png",
           description:
             "Site renewal of a complex facility in Tokyo. Nearly 1,000 pages were created by three coders. I also worked on creating the design.",
@@ -111,16 +111,16 @@ export default {
         {
           title: "Cinema Classics",
           url: "https://www.cinemaclassics.jp/",
-          skill: "Wordpress, Javascript, jQuery",
+          skill: "WordPress, JavaScript, jQuery",
           img: "cinemaclassics.png",
           description:
-            "Renewal of the movie site operated by Shochiku Co., Ltd. Uses Wordpress and Javascript.",
+            "Renewal of the movie site operated by Shochiku Co., Ltd. Uses WordPress and Javascript.",
           show: false,
         },
         {
           title: "男はつらいよ（It's Tough Being a Man.）",
           url: "https://www.cinemaclassics.jp/tora-san/",
-          skill: "Photoshop, Javascript, Illustrator",
+          skill: "JavaScript, Photoshop, Illustrator",
           img: "otokohatsuraiyo.png",
           description:
             "Official website for " +

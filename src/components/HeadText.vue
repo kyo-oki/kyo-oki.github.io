@@ -28,7 +28,7 @@ p {
   height: 200px;
 }
 h2 {
-  padding-top: 80px;
+  padding-top: 150px;
   margin-bottom: 40px;
   font-family: "Montserrat", "Zen Kaku Gothic New", sans-serif;
   span {

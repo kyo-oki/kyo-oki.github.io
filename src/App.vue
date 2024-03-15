@@ -1,8 +1,5 @@
 <template>
   <v-app>
-    <!-- <v-app-bar app>
-      <v-spacer></v-spacer>
-    </v-app-bar> -->
     <HeaderContent />
 
     <v-main style="padding-top: 48px">
@@ -56,7 +53,7 @@ p {
   margin: 0;
 }
 footer {
-  margin-top: 24px;
+  margin-top: 160px;
   background-color: #333;
   padding: 8px;
   text-align: center;

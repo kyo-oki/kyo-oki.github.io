@@ -31,11 +31,11 @@ export default {
           rate: 90,
         },
         {
-          name: "CSS3 / SASS",
+          name: "CSS3 / Sass",
           rate: 90,
         },
         {
-          name: "Javascript",
+          name: "JavaScript",
           rate: 80,
         },
         {
@@ -43,7 +43,7 @@ export default {
           rate: 70,
         },
         {
-          name: "Typescript",
+          name: "TypeScript",
           rate: 70,
         },
         {
@@ -67,7 +67,7 @@ export default {
           rate: 40,
         },
         {
-          name: "Wordpress",
+          name: "WordPress",
           rate: 40,
         },
         {
