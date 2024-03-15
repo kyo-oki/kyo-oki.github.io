@@ -96,7 +96,7 @@ export default {
           skill: "Javascript, PHP, Photoshop",
           img: "myna.png",
           description:
-            "Mynaportal is an online service operated by the government. You can perform administrative procedures such as childcare and nursing care in one place, and also check notifications from government agencies.",
+            "Mynaportal is an online service operated by the government. Citizens can perform administrative procedures such as childcare and nursing care in one place, and also check notifications from government agencies.",
           show: false,
         },
         {
@@ -123,7 +123,9 @@ export default {
           skill: "Photoshop, Javascript, Illustrator",
           img: "otokohatsuraiyo.png",
           description:
-            "Official website for ``Otoko wa Tsurai yo'', a popular series that represents Japan. Responsible for image retouching, loading huge amounts of photos, and production assistance using Javascript and Wordpress.",
+            "Official website for " +
+            "男はつらいよ（It's Tough Being a Man.）" +
+            ", a popular series that represents Japan. Responsible for image retouching, loading huge amounts of photos, and production assistance using Javascript and Wordpress.",
           show: false,
         },
       ],
