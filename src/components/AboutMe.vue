@@ -9,7 +9,7 @@
         Hello! My name is Kyosuke Oki. Thank you for browsing my portfolio
         Site.<br />I'm a Japanese web developer and software engineer. <br />I
         am currently staying in Melbourne, Australia on a working holiday visa
-        (my visa is valid until December 2024) <br />I'm passionate about
+        (My visa is valid until December 2024) <br />I'm passionate about
         building user-pleasing sites that incorporate interactive design and the
         latest technology. <br />I am mainly good at front-end development, but
         I also find it rewarding to be involved in back-end development of PHP,

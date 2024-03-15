@@ -65,7 +65,7 @@ export default {
           title: "Raksul Product - Envelope",
           url: "https://raksul.com/print/envelope/naga3/traced_off/prices?size=NAGA3",
           skill:
-            "Vue.js, Typescript, Jest, E2E, Ruby on Rails, Project Management, Requirement definition",
+            "Vue.js, TypeScript, Jest, E2E, Ruby on Rails, Project Management, Requirement definition",
           img: "raksul.png",
           description:
             "Responsible for everything from requirements definition to wireframe creation and development. The number of products packaged in envelopes increased approximately 10 times, contributing to sales.",
