@@ -29,9 +29,6 @@
 export default {
   name: "CircleStorage",
   props: ["name", "rate"],
-  data() {
-    return {};
-  },
   methods: {
     getColorCode(rate) {
       if (rate >= 70) {

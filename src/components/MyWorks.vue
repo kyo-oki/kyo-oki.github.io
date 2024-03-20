@@ -81,7 +81,7 @@ export default {
           show: false,
         },
         {
-          title: "Hayaraku HACCP",
+          title: "はやらくHACCP（Hayaraku HACCP）",
           url: "https://www.lionhygiene.co.jp/hayaraku/haccp/",
           skill:
             "Vue.js, Vuetify, Node.js, PostgreSQL, Salesforce, Agile software development",

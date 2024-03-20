@@ -41,11 +41,6 @@ export default {
       },
     ],
   }),
-  methods: {
-    aaa() {
-      console.log("動いてます");
-    },
-  },
 };
 </script>
 <style lang="scss">

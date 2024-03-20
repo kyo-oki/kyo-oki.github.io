@@ -12,15 +12,6 @@ import ContentsContainer from "./ContentsContainer";
 
 export default {
   name: "MainVisual",
-  data() {
-    return {
-      items: [
-        { src: "image1.jpg", alt: "Image 1" },
-        { src: "image2.jpg", alt: "Image 2" },
-        { src: "image3.jpg", alt: "Image 3" },
-      ],
-    };
-  },
   components: {
     ContentsContainer,
   },

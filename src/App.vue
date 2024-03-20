@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <HeaderContent />
-
     <v-main style="padding-top: 48px">
       <MainVisual />
       <About />
@@ -36,8 +35,6 @@ export default {
     Works,
     ContactMe,
   },
-
-  data: () => ({}),
 };
 </script>
 <style lang="scss">
