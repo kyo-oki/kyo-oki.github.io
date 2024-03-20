@@ -81,13 +81,13 @@ export default {
           show: false,
         },
         {
-          title: "はやらくHACCP（Hayaraku HACCP）",
+          title: "はやらくHACCP",
           url: "https://www.lionhygiene.co.jp/hayaraku/haccp/",
           skill:
             "Vue.js, Vuetify, Node.js, PostgreSQL, Salesforce, Agile software development",
           img: "haccp.png",
           description:
-            "A management system that uses a hygiene management method called HACCP. I devised a design based on requirements definition. Database design. Frontend/backend development. Responsible for management progress as a project manager",
+            "はやらくHACCP（Hayaraku HACCP）is a management system that uses a hygiene management method called HACCP. I devised a design based on requirements definition. Database design. Frontend/backend development. Responsible for management progress as a project manager",
           show: false,
         },
         {
