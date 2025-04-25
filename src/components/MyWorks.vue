@@ -65,7 +65,7 @@ export default {
           title: "Wabify - Application Development",
           url: "https://app.wabify.com/",
           skill:
-            "React, Next.js, TypeScript, Tailwind CSS, Stripe API, PostgreSQL, Prisma, REST API, GitHub Actions",
+            "React, Next.js, TypeScript, Tailwind CSS, Stripe API, REST API, Figma,",
           img: "wabify-app.png",
           description:
             "Developed and optimized core features for an all-in-one restaurant management platform, including POS, team management, inventory, gift cards, online store, and invoice processing. Focused on UX, scalability, and maintainability.",
@@ -75,7 +75,7 @@ export default {
           title: "Wabify - Landing Page",
           url: "https://wabify.com/",
           skill:
-            "Next.js, TypeScript, Tailwind CSS, Framer Motion, Responsive Design, SEO",
+            "Next.js, TypeScript, Tailwind CSS, Framer Motion, REST API, Responsive Design, Figma, SEO, Clarity",
           img: "wabify-landing.png",
           description:
             "Designed and implemented the marketing landing page for Wabify. Focused on visual storytelling, responsive UI, and SEO optimization to improve user engagement and conversion.",
