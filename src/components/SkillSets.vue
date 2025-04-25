@@ -39,6 +39,10 @@ export default {
           rate: 80,
         },
         {
+          name: "React.js / Next",
+          rate: 80,
+        },
+        {
           name: "Vue.js / Nuxt",
           rate: 70,
         },
@@ -49,10 +53,6 @@ export default {
         {
           name: "Linux / MacOS",
           rate: 60,
-        },
-        {
-          name: "React / Next",
-          rate: 50,
         },
         {
           name: "Node.js",
@@ -72,6 +72,10 @@ export default {
         },
         {
           name: "AWS",
+          rate: 40,
+        },
+        {
+          name: "Swift",
           rate: 40,
         },
         {
