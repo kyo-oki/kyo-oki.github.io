@@ -8,14 +8,19 @@
       <div class="description_wrapper">
         <p>
           Hello! My name is Kyosuke Oki. Thank you for browsing my portfolio
-          Site.<br />I'm a Japanese web developer and software engineer. <br />I
-          am currently staying in Melbourne, Australia on a working holiday visa
-          (My visa is valid until December 2024) <br />I'm passionate about
-          building user-pleasing sites that incorporate interactive design and
-          the latest technology. <br />I am mainly good at front-end
-          development, but I also find it rewarding to be involved in back-end
-          development of PHP, Java, Ruby, etc., and bug investigation using AWS
-          Cloud Front.
+          Site.<br />I am a software engineer with 10 years of experience,
+          specializing in frontend and full-stack development. I have a strong
+          background in React, Next.js, and TypeScript, with experience in
+          backend development using Node.js and REST APIs. <br />
+          Currently, at Wabify, I am developing and optimizing an all-in-one
+          restaurant management platform, working on POS systems, inventory and
+          team management, online store functionality, and invoice processing. I
+          focus on scalability, performance, and usability, contributing across
+          both frontend and backend development.<br />
+          Previously, at Raksul, I worked as a frontend engineer, primarily
+          using Vue.js to develop and maintain large-scale web applications. I
+          focused on UI performance optimization, component-based architecture,
+          and improving the overall user experience.
         </p>
         <ul class="aboutIcons">
           <li>

@@ -62,6 +62,26 @@ export default {
       show: false,
       works: [
         {
+          title: "Wabify - Application Development",
+          url: "https://app.wabify.com/",
+          skill:
+            "React, Next.js, TypeScript, Tailwind CSS, Stripe API, PostgreSQL, Prisma, REST API, GitHub Actions",
+          img: "wabify-app.png",
+          description:
+            "Developed and optimized core features for an all-in-one restaurant management platform, including POS, team management, inventory, gift cards, online store, and invoice processing. Focused on UX, scalability, and maintainability.",
+          show: false,
+        },
+        {
+          title: "Wabify - Landing Page",
+          url: "https://wabify.com/",
+          skill:
+            "Next.js, TypeScript, Tailwind CSS, Framer Motion, Responsive Design, SEO",
+          img: "wabify-landing.png",
+          description:
+            "Designed and implemented the marketing landing page for Wabify. Focused on visual storytelling, responsive UI, and SEO optimization to improve user engagement and conversion.",
+          show: false,
+        },
+        {
           title: "Raksul Product - Envelope",
           url: "https://raksul.com/print/envelope/naga3/traced_off/prices?size=NAGA3",
           skill:
