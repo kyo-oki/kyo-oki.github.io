@@ -2,11 +2,7 @@
   <v-app>
     <HeaderContent />
     <v-main style="padding-top: 48px">
-      <MainVisual />
-      <About />
-      <Skills />
-      <Works />
-      <ContactMe />
+      <router-view></router-view>
       <footer class="footer">
         <small class="copyright">
           Copyright © Kyosuke Oki All rights reserved.
@@ -18,22 +14,12 @@
 
 <script>
 import HeaderContent from "./components/Header";
-import MainVisual from "./components/MainVisual";
-import About from "./components/AboutMe.vue";
-import Skills from "./components/SkillSets.vue";
-import Works from "./components/MyWorks.vue";
-import ContactMe from "./components/ContactMe.vue";
 
 export default {
   name: "App",
 
   components: {
     HeaderContent,
-    MainVisual,
-    About,
-    Skills,
-    Works,
-    ContactMe,
   },
 };
 </script>

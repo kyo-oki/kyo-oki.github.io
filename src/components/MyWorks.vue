@@ -62,6 +62,16 @@ export default {
       show: false,
       works: [
         {
+          title: "NeighCrew - On-Demand Staffing Platform",
+          url: "/neighcrew",
+          skill:
+            "Next.js, React, TypeScript, Node.js, Neon PostgreSQL, Stripe Connect, Expo, React Native, Tailwind CSS, Drizzle ORM",
+          img: "neighcrew-logo-full.png",
+          description:
+            "A comprehensive staffing solution designed specifically for the Australian hospitality industry. The platform connects venue managers who need staff with verified workers looking for flexible shifts. Features include GPS-based clock-in/out, real-time notifications, secure payments via Stripe Connect, and comprehensive shift management.",
+          show: false,
+        },
+        {
           title: "Wabify - Application Development",
           url: "https://app.wabify.com/",
           skill:
@@ -153,7 +163,13 @@ export default {
   },
   methods: {
     transition(url) {
-      window.open(url, "_blank");
+      // Check if it's an internal route (starts with /)
+      if (url.startsWith("/")) {
+        this.$router.push(url);
+      } else {
+        // External URL - open in new tab
+        window.open(url, "_blank");
+      }
     },
   },
 };
