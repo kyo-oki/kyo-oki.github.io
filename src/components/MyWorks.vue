@@ -63,7 +63,7 @@ export default {
       works: [
         {
           title: "NeighCrew - On-Demand Staffing Platform",
-          url: "/neighcrew",
+          url: "https://www.neighcrew.com/",
           skill:
             "Next.js, React, TypeScript, Node.js, Neon PostgreSQL, Stripe Connect, Expo, React Native, Tailwind CSS, Drizzle ORM",
           img: "neighcrew-logo-full.png",
