@@ -1,52 +1,43 @@
 <template>
-  <v-row id="works">
-    <HeadText title="WORKS" />
-    <v-row justify="center">
-      <div v-for="(work, index) in works" :key="index">
-        <v-card class="mx-auto cardWrapper" max-width="344">
-          <div class="imageWrapper" @click="transition(work.url)">
-            <v-img
-              height="200px"
-              :src="require(`../assets/${work.img}`)"
-              cover
-              class="coverImg"
-            ></v-img>
+  <section id="works" class="section-shell">
+    <HeadText title="SELECTED WORK" />
+    <p class="work-intro">
+      Products and interfaces I have helped build—from restaurant operations to
+      an independently developed marketplace.
+    </p>
+    <div class="work-grid">
+      <article v-for="work in works" :key="work.url" class="work-card">
+        <img
+          :src="require(`../assets/${work.img}`)"
+          :alt="work.title + ' — project preview'"
+          width="680"
+          height="400"
+          loading="lazy"
+        />
+        <div class="work-body">
+          <p v-if="work.role" class="work-role">{{ work.role }}</p>
+          <h3>{{ work.title }}</h3>
+          <p>{{ work.description }}</p>
+          <p class="work-tools">{{ work.skill }}</p>
+          <div class="work-actions">
+            <router-link
+              v-if="work.caseStudy"
+              :to="work.caseStudy"
+              class="action-link action-link--primary"
+              >View case study</router-link
+            >
+            <a
+              :href="work.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              :aria-label="'Visit ' + work.title + ' (opens in a new tab)'"
+              >Visit website ↗</a
+            >
           </div>
-          <v-card-title>{{ work.title }}</v-card-title>
-          <v-card-subtitle>{{ work.skill }}</v-card-subtitle>
-          <v-card-actions>
-            <v-btn
-              color="orange-lighten-2"
-              variant="text"
-              @click="transition(work.url)"
-            >
-              Explore
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-btn
-              class="mx-2"
-              @click="work.show = !work.show"
-              small
-              fab
-              dark
-              color="indigo"
-            >
-              <v-icon dark v-if="!work.show"> mdi-plus </v-icon>
-              <v-icon dark v-if="work.show"> mdi-minus </v-icon>
-            </v-btn>
-          </v-card-actions>
-          <v-expand-transition>
-            <div v-show="work.show">
-              <v-divider></v-divider>
-              <v-card-text>
-                {{ work.description }}
-              </v-card-text>
-            </div>
-          </v-expand-transition>
-        </v-card>
-      </div>
-    </v-row>
-  </v-row>
+        </div>
+      </article>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -62,23 +53,26 @@ export default {
       show: false,
       works: [
         {
-          title: "NeighCrew - On-Demand Staffing Platform",
+          title: "NeighCrew — Hospitality Marketplace",
+          role: "Solo engineer · End-to-end ownership",
+          caseStudy: "/neighcrew",
           url: "https://www.neighcrew.com/",
           skill:
             "Next.js, React, TypeScript, Node.js, Neon PostgreSQL, Stripe Connect, Expo, React Native, Tailwind CSS, Drizzle ORM",
           img: "neighcrew-logo-full.png",
           description:
-            "A comprehensive staffing solution designed specifically for the Australian hospitality industry. The platform connects venue managers who need staff with verified workers looking for flexible shifts. Features include GPS-based clock-in/out, real-time notifications, secure payments via Stripe Connect, and comprehensive shift management.",
+            "Built a hospitality marketplace end-to-end, then iterated from staffing into hosted sessions. Owned product flows, database design, Stripe Connect onboarding, payment capture, and webhook validation.",
           show: false,
         },
         {
           title: "Wabify - Application Development",
+          role: "Frontend Systems Engineer · Apr 2024–Feb 2026",
           url: "https://app.wabify.com/",
           skill:
             "React, Next.js, TypeScript, Tailwind CSS, Stripe API, REST API, Figma,",
           img: "wabify-app.png",
           description:
-            "Developed and optimized core features for an all-in-one restaurant management platform, including POS, team management, inventory, gift cards, online store, and invoice processing. Focused on UX, scalability, and maintainability.",
+            "Owned frontend architecture for restaurant operations spanning POS, reservations, payments, and staff workflows. Refactored state-heavy React screens into clearer feature boundaries and implemented sequential payment submission and retry handling.",
           show: false,
         },
         {
@@ -161,34 +155,72 @@ export default {
       ],
     };
   },
-  methods: {
-    transition(url) {
-      // Check if it's an internal route (starts with /)
-      if (url.startsWith("/")) {
-        this.$router.push(url);
-      } else {
-        // External URL - open in new tab
-        window.open(url, "_blank");
-      }
-    },
-  },
 };
 </script>
-<style lang="scss">
-.imageWrapper {
+<style scoped>
+.work-intro {
+  max-width: 700px;
+  line-height: 1.75;
+  margin-bottom: 32px;
+}
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+.work-card {
+  border: 1px solid #dae2ed;
+  border-radius: 12px;
   overflow: hidden;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
-.coverImg {
-  transition: 0.4s;
-  &:hover {
-    transform: scale(1.3);
-    opacity: 0.6;
+.work-card img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1.7;
+  object-fit: contain;
+  background: #f3f6fb;
+}
+.work-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+h3 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+p {
+  line-height: 1.75;
+}
+.work-role {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #344f7b;
+}
+.work-tools {
+  font-size: 0.875rem;
+  color: #52617a;
+}
+.work-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+.work-actions > a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+@media (max-width: 700px) {
+  .work-grid {
+    grid-template-columns: 1fr;
   }
-}
-.row,
-.row + .row {
-  margin: 0;
-  gap: 16px;
 }
 </style>

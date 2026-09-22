@@ -4,6 +4,7 @@
     <v-container fluid class="hero pa-0">
       <v-img
         :src="require(`../assets/neighcrew_keyvisual.png`)"
+        alt="NeighCrew hospitality marketplace"
         height="420"
         cover
         class="hero__image"
@@ -21,13 +22,14 @@
                     Hospitality
                   </v-chip>
                   <v-chip class="hero__chip" small outlined color="white">
-                    On-demand
+                    Solo engineer
                   </v-chip>
                 </div>
 
                 <h1 class="hero__title">NeighCrew</h1>
                 <p class="hero__subtitle">
-                  On-Demand Staffing Platform for Australian Hospitality
+                  Building a hospitality marketplace, from staffing to hosted
+                  sessions
                 </p>
               </v-col>
             </v-row>
@@ -56,18 +58,69 @@
         <div class="section__header">
           <h2 class="section__title">Service Overview</h2>
           <p class="section__lead">
-            NeighCrew is a comprehensive staffing solution designed specifically
-            for the Australian hospitality industry. The platform connects venue
-            managers who need staff with verified workers looking for flexible
-            shifts in roles like bartending, barista work, and waiting tables.
+            I designed and built NeighCrew end-to-end as a hospitality
+            marketplace. It began with a staffing workflow connecting venues and
+            workers, then evolved to support venue-hosted sessions. My work
+            spans product discovery, frontend and API development, database
+            design, and payment operations.
           </p>
         </div>
+      </section>
+
+      <section class="section section--soft">
+        <h2 class="section__title">Engineering decisions</h2>
+        <h3>Make payment readiness explicit</h3>
+        <p class="section__lead">
+          I implemented Stripe Connect Express onboarding for workers and
+          venues, including Account Links, post-onboarding verification, and
+          payment readiness checks. Returning from onboarding is not treated as
+          proof that an account is ready to receive payments.
+        </p>
+        <h3>Validate payments against booking state</h3>
+        <p class="section__lead">
+          Hosted booking flows use PaymentIntents with manual capture.
+          Metadata-driven validation connects Stripe events to internal booking
+          records, with automatic refund paths when booking validation fails.
+        </p>
+        <h3>Handle the full payment lifecycle</h3>
+        <p class="section__lead">
+          A central webhook handler covers payments, transfers, payouts,
+          accounts, refunds, and disputes. This keeps the integration focused on
+          operational state changes, not just the checkout screen.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2 class="section__title">Early validation & iteration</h2>
+        <p class="section__lead">
+          By March 2026, early beta outreach had brought in 66 registered users:
+          61 workers and 5 venues. These are registration figures, not active
+          usage or revenue. Feedback informed the move toward hosted sessions
+          and further iteration on marketplace workflows.
+        </p>
+        <p class="section__lead">
+          I used written specifications and AI-assisted exploration to compare
+          approaches before implementation, while retaining ownership of product
+          and technical decisions.
+        </p>
+        <a
+          class="action-link"
+          href="https://www.neighcrew.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Visit NeighCrew ↗</a
+        >
       </section>
 
       <!-- Key Features -->
       <section class="section section--soft">
         <div class="section__header">
-          <h2 class="section__title">Key Features</h2>
+          <h2 class="section__title">Original staffing workflows</h2>
+          <p class="section__lead">
+            The initial product covered both venue and worker operations. This
+            section documents that staffing scope; the hosted-session work
+            builds on the same marketplace foundations.
+          </p>
         </div>
 
         <v-row class="mt-2" dense>
@@ -400,9 +453,9 @@ export default {
           color: "purple",
         },
         {
-          title: "Comprehensive Testing",
+          title: "Specification-led development",
           description:
-            "Implemented E2E testing with Playwright (web) and Maestro (mobile), covering 116+ test scenarios for critical flows.",
+            "Compared product and technical approaches through written specifications before locking scope across onboarding, payments, and operations.",
           icon: "mdi-test-tube",
           color: "red",
         },

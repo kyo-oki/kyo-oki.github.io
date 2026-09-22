@@ -2,7 +2,8 @@
   <div>
     <v-btn
       class="mx-2 mailFixed"
-      @click="opentoMail"
+      href="mailto:kyosuke.oki.33@gmail.com"
+      aria-label="Email Kyosuke Oki"
       large
       fab
       dark
@@ -17,11 +18,6 @@
 export default {
   name: "ContactMe",
   components: {},
-  methods: {
-    opentoMail() {
-      window.open("mailto:kyosuke.oki.33@gmail.com", "_blank");
-    },
-  },
 };
 </script>
 <style lang="scss" scoped>

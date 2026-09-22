@@ -16,14 +16,12 @@ export default {
   },
   methods: {
     handleScroll() {
-      console.log(this);
       if (this.show) return;
       var top = this.$el.getBoundingClientRect().top;
       this.show = top < window.innerHeight + 100;
-      console.log(top, window.innerHeight);
     },
   },
-  created() {
+  mounted() {
     this.handleScroll();
     window.addEventListener("scroll", this.handleScroll);
   },

@@ -1,94 +1,75 @@
 <template>
-  <div id="skills">
-    <HeadText title="SKILLS" />
-    <v-row justify="center" class="cardRow">
-      <CircleStorage
-        v-for="(circleStorage, index) in circleStorages"
-        :key="index"
-        :name="circleStorage.name"
-        :rate="circleStorage.rate"
-        :limit="circleStorage.limit"
-      />
-    </v-row>
-  </div>
+  <section id="skills" class="section-shell">
+    <HeadText title="EXPERTISE" />
+    <div class="expertise-grid">
+      <article v-for="skill in skills" :key="skill.title">
+        <h3>{{ skill.title }}</h3>
+        <p>{{ skill.description }}</p>
+        <p class="expertise-tools">{{ skill.tools }}</p>
+      </article>
+    </div>
+  </section>
 </template>
-
 <script>
 import HeadText from "./HeadText";
-import CircleStorage from "./CircleStorage";
-
 export default {
   name: "SkillSets",
-  components: {
-    CircleStorage,
-    HeadText,
-  },
-  data() {
-    return {
-      circleStorages: [
-        {
-          name: "HTML5",
-          rate: 90,
-        },
-        {
-          name: "CSS3 / Sass",
-          rate: 90,
-        },
-        {
-          name: "JavaScript",
-          rate: 80,
-        },
-        {
-          name: "React.js / Next",
-          rate: 80,
-        },
-        {
-          name: "Vue.js / Nuxt",
-          rate: 70,
-        },
-        {
-          name: "TypeScript",
-          rate: 70,
-        },
-        {
-          name: "Linux / MacOS",
-          rate: 60,
-        },
-        {
-          name: "Node.js",
-          rate: 50,
-        },
-        {
-          name: "SQL / MySQL",
-          rate: 50,
-        },
-        {
-          name: "PHP",
-          rate: 40,
-        },
-        {
-          name: "WordPress",
-          rate: 40,
-        },
-        {
-          name: "AWS",
-          rate: 40,
-        },
-        {
-          name: "Swift",
-          rate: 40,
-        },
-        {
-          name: "Photoshop / Illustrator",
-          rate: 30,
-        },
-      ],
-    };
-  },
+  components: { HeadText },
+  data: () => ({
+    skills: [
+      {
+        title: "Frontend architecture",
+        description:
+          "Clear state and component boundaries for complex, high-interaction operational screens.",
+        tools: "React · Next.js · TypeScript · Vue.js · Zustand · React Query",
+      },
+      {
+        title: "Payments & workflows",
+        description:
+          "Payment state handling, retries, onboarding, and webhook validation across customer and operational interfaces.",
+        tools: "Stripe · Stripe Connect · REST APIs",
+      },
+      {
+        title: "End-to-end delivery",
+        description:
+          "From requirements and database design to implementation, product iteration, and collaboration across teams.",
+        tools: "Node.js · PostgreSQL · Drizzle ORM",
+      },
+      {
+        title: "Quality & maintainability",
+        description:
+          "Component composition, testing, and performance improvements that keep products understandable as they grow.",
+        tools: "Jest · GitHub Actions · Responsive UI",
+      },
+    ],
+  }),
 };
 </script>
-<style lang="scss" scoped>
-.cardRow {
-  margin: 0 !important;
+<style scoped>
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+article {
+  border-top: 2px solid #c9d8ed;
+  padding-top: 24px;
+}
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+p {
+  line-height: 1.75;
+}
+.expertise-tools {
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: #344f7b;
+}
+@media (max-width: 600px) {
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

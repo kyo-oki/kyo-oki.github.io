@@ -1,89 +1,67 @@
 <template>
-  <v-card id="header">
-    <!-- Show back button on detail pages -->
-    <div v-if="isDetailPage" class="back-nav">
-      <v-btn
-        text
-        color="primary"
-        @click="$router.push('/')"
-        class="back-button"
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <router-link v-if="$route.path !== '/'" to="/"
+        >← Back to portfolio</router-link
       >
-        <v-icon left>mdi-arrow-left</v-icon>
-        Back to Portfolio
-      </v-btn>
-    </div>
-    <!-- Show normal navigation on home page -->
-    <v-tabs
-      v-else
-      id="nav"
-      v-model="tab"
-      align-tabs="center"
-      color="deep-purple-accent-4"
-    >
-      <v-tab
-        v-for="(info, index) in tabInfo"
-        :key="index"
-        v-scroll-to="{ el: `#${info.to_id}`, offset: 0 }"
-        >{{ info.subtitle }}</v-tab
-      >
-    </v-tabs>
-  </v-card>
+      <template v-else>
+        <a
+          v-for="item in items"
+          :key="item.id"
+          :href="'#' + item.id"
+          v-scroll-to="{ el: '#' + item.id, offset: -72 }"
+          >{{ item.label }}</a
+        >
+      </template>
+    </nav>
+  </header>
 </template>
-
 <script>
 export default {
   name: "HeaderContent",
-
   data: () => ({
-    tab: "tab",
-    tabInfo: [
-      {
-        to_id: "home",
-        subtitle: "HOME",
-      },
-      {
-        to_id: "about",
-        subtitle: "ABOUT",
-      },
-      {
-        to_id: "skills",
-        subtitle: "SKILLS",
-      },
-      {
-        to_id: "works",
-        subtitle: "WORKS",
-      },
+    items: [
+      { id: "home", label: "Home" },
+      { id: "works", label: "Work" },
+      { id: "skills", label: "Expertise" },
+      { id: "about", label: "About" },
+      { id: "creative", label: "Creative" },
     ],
   }),
-  computed: {
-    isDetailPage() {
-      return this.$route.path !== "/";
-    },
-  },
 };
 </script>
-<style lang="scss">
-#header {
+<style scoped>
+.site-header {
   position: fixed;
   width: 100%;
   z-index: 10;
-  box-shadow: none;
+  background: #fffffffa;
+  border-bottom: 1px solid #e4e9f0;
 }
-#nav {
-  display: flex;
-  justify-content: center;
-}
-.v-tabs-slider {
-  background-color: #e0e0e0;
-}
-.back-nav {
+nav {
+  min-height: 64px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 16px;
-  min-height: 48px;
+  gap: 8px;
 }
-.back-button {
-  text-transform: none;
+a {
+  padding: 14px 12px;
+  color: #233e68;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  nav {
+    gap: 0;
+  }
+  a {
+    padding: 14px 7px;
+    font-size: 0.875rem;
+  }
 }
 </style>
